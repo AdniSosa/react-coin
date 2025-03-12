@@ -4,9 +4,9 @@ const Root = () => {
     return (
         <>
             <nav>
-                <Link to='/'>Home</Link>
-                <Link to='/coin/:id'>Coin</Link>
-                <Link to='/favorites'>Favoritos</Link>
+                <Link to='/'></Link>
+                <Link to='/coin/:id'></Link>
+                <Link to='/favorites'></Link>
             </nav>
             <Outlet />
         </>

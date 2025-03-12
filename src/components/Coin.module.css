@@ -1,0 +1,28 @@
+.coinDetails{
+    background-color: rgb(195, 195, 241);
+    width: 320px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+.coinDetails h2{
+    font-size: 25px;
+}
+
+.homeLink {
+    font-size: 15px bold;
+    color: #007bff;
+    margin-left: 140px;
+}
+
+.favoritosLink{
+    display: flex;
+    margin-top: 20px;
+    font-size: 15px bold;
+    color: #007bff;
+    margin-left: 160px;
+
+}

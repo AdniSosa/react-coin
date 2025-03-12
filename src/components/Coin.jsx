@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import styles from "./Coin.module.css";
 
 const coinDetails = () => {
     const { id } = useParams();
@@ -25,17 +26,25 @@ const coinDetails = () => {
         }
 
     }
- 
+
     useEffect(() => {
         getCoinDetails();
     }, [id]);
 
     return(
         <>
-            <h1>{coin.name} ({coin.symbol})</h1>
+        <div className={styles.coinDetails}>
+            <h2>{coin.name} ({coin.symbol})</h2>
             <p>Ranking: {coin.rank}</p>
             <p>Precio: ${coin.priceUsd}</p>
             <a href={coin.explorer}>Más información</a>
+        </div>
+        <div >
+            <Link to="/"className={styles.homeLink}>Volver a Home</Link>
+        </div>
+        <div >
+            <Link to="/"className={styles.favoritosLink}>Favoritos</Link>
+        </div>
         </>
     )
 }

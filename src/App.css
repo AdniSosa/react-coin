@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    background-image: url("https://img.freepik.com/foto-gratis/mano-masculina-litecoin-dorado-sobre-fondo-azul_155003-5309.jpg?t=st=1741783238~exp=1741786838~hmac=9dd41cb015479bae697c876e4e399f1101daac46651b5f2e85801e130df660eb&w=1380");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: rgb(42, 39, 145)
+}
+
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+
+}
+
+a:visited { /*cambiar color cuando le damos ya visitamos link*/
+    color: rgb(42, 39, 145)
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 1.2em;
+    line-height: 1.1;
+}
+
+nav {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 50px;
+    font-size: 15px;
+}
+
+
+
+
+
+
