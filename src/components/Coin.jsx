@@ -5,6 +5,9 @@ import styles from "./Coin.module.css";
 const coinDetails = () => {
     const { id } = useParams();
     const [coin, setCoin] = useState('');
+    //Añadimos favoritos
+    const [isFavorite, setIsFavorite] = useState(false)
+
     
     const getCoinDetails = async () => {
         //console.log(id)
@@ -21,6 +24,10 @@ const coinDetails = () => {
             const data = await response.json();
             console.log(data.data)
             setCoin(data.data);
+
+            //Comprobación
+            const favorites = JSON.parse(localStorage.getItem("favorites")) || [] // 
+            setIsFavorite(favorites.some(favorite => favorite.id === data.data.id))
         } catch (err) {
             console.error(err)
         }
@@ -30,6 +37,21 @@ const coinDetails = () => {
     useEffect(() => {
         getCoinDetails();
     }, [id]);
+
+    // Función favoritos
+    const buttomFavorite = () => {
+        let favorites = JSON.parse(localStorage.getItem("favorites")) || []
+
+        if(isFavorite) {
+            favorites = favorites.filter(favorite => favorite.id !== coin.id)
+        } else {
+            favorites.push(coin)
+        }
+
+        localStorage.setItem("favorites", JSON.stringify(favorites))
+        setIsFavorite(!isFavorite)
+    }
+
 
     return(
         <>
@@ -45,6 +67,11 @@ const coinDetails = () => {
         <div >
             <Link to="/"className={styles.favoritosLink}>Favoritos</Link>
         </div>
+                <button onClick={buttomFavorite}>
+                    {isFavorite ? "Quitar de Favoritos" : "Añadir a Favoritos"}
+                <form>
+            </form>
+            </button>
         </>
     )
 }
