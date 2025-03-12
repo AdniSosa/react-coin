@@ -38,6 +38,9 @@ const Home = () => {
                 ))}
             </ul>
         </div>
+        <div >
+            <Link to="/favorites"className={styles.favoritosLink}>Favoritos</Link>
+        </div>
         </>
     )
 }

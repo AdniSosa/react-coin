@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import styles from "./Favorites.module.css";
 
 const Favorites = () => {
     const [favorites, setFavorites] = useState([]);
@@ -39,6 +40,10 @@ const Favorites = () => {
 
     return (
         <>
+        <div >
+            <Link to="/"className={styles.homeLink}>Volver a Home</Link>
+        </div>
+        <div  className={styles.FavoritesList} >
             <h1>Mis Criptos Favoritas</h1>
             {updatedFavorites.length === 0 ? (
                 <p>No hay criptomonedas favoritas.</p>
@@ -47,13 +52,12 @@ const Favorites = () => {
                     {updatedFavorites.map(coin => (
                         <li key={coin.id}>
                             <Link to={`/coin/:${coin.id}`}><h2>{coin.name}</h2></Link>
-                            <form>
-                                <button onClick={() => removeFavorite(coin.id)}>Quitar</button>
-                            </form>
                         </li>
                     ))}
                 </ul>
             )}
+        </div>
+        <button onClick={() => removeFavorite(coin.id)} className={styles.FavoritesButton}>Quitar</button>
         </>
     );
 };

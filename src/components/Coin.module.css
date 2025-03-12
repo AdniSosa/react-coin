@@ -14,15 +14,25 @@
 
 .homeLink {
     font-size: 15px bold;
-    color: #007bff;
+    color: rgb(42, 39, 145);
     margin-left: 140px;
 }
 
-.favoritosLink{
+.favoritesLink{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 15px bold;
+    color: rgb(42, 39, 145);
+    margin-left: 160px;
+}
+
+.favoritesButton{
     display: flex;
     margin-top: 20px;
     font-size: 15px bold;
-    color: #007bff;
-    margin-left: 160px;
-
+    color: rgb(20, 18, 67);
+    margin-left: 130px;
+    background-color: rgb(190, 130, 214);
+    border-radius: 10px;
 }

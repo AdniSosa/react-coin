@@ -55,23 +55,24 @@ const coinDetails = () => {
 
     return(
         <>
+        <div >
+            <Link to="/"className={styles.homeLink}>Volver a Home</Link>
+        </div>
+        <div >
+            <Link to="/favorites"className={styles.favoritesLink}>Favoritos</Link>
+        </div>
         <div className={styles.coinDetails}>
             <h2>{coin.name} ({coin.symbol})</h2>
             <p>Ranking: {coin.rank}</p>
             <p>Precio: ${coin.priceUsd}</p>
             <a href={coin.explorer}>Más información</a>
         </div>
-        <div >
-            <Link to="/"className={styles.homeLink}>Volver a Home</Link>
-        </div>
-        <div >
-            <Link to="/"className={styles.favoritosLink}>Favoritos</Link>
-        </div>
-                <button onClick={buttomFavorite}>
-                    {isFavorite ? "Quitar de Favoritos" : "Añadir a Favoritos"}
-                <form>
-            </form>
+
+        <div>
+            <button onClick={buttomFavorite}className={styles.favoritesButton}>
+                {isFavorite ? "Quitar de Favoritos" : "Añadir a Favoritos"}
             </button>
+        </div>
         </>
     )
 }
