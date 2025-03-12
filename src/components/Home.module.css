@@ -19,3 +19,9 @@
     height: 60px;
     margin-bottom: 15px;
 }
+
+.favoritesLink{
+    font-size: 15px bold;
+    color: rgb(42, 39, 145);
+    margin-left: 140px;
+}

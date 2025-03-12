@@ -28,6 +28,9 @@ const Home = () => {
     
     return(
         <>
+        <div >
+            <Link to="/favorites"className={styles.favoritesLink}>Favoritos</Link>
+        </div>
         <div className={styles.Home}>
             <h1>Criptomonedas</h1>
             <ul>
